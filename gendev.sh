@@ -22,7 +22,7 @@ echo "[DEBUG] HTB_API_TOKEN length: ${#HTB_API_TOKEN}"
 # 2) Ensure htbcli.py exists (patched version)
 if [[ ! -f htbcli.py ]]; then
     echo "[*] Downloading htbcli.py..."
-    wget -O htbcli.py "https://raw.githubusercontent.com/thekeen01/htbcli/a0a4b856f64bd9473fef44dc8db64e0236a46e5a/htbcli.py"
+    wget -q -O htbcli.py "https://raw.githubusercontent.com/thekeen01/htbcli/a0a4b856f64bd9473fef44dc8db64e0236a46e5a/htbcli.py"
     echo "[!] Re-apply your get_machine_id_by_profile() patch now."
 fi
 
@@ -87,6 +87,7 @@ if [[ "${MACHINE_START,,}" == "puppy" ]]; then
 
     # Enable RDP
     echo "[*] Enabling RDP via netexec..."
+    netexec smb "${HOSTNAME}" -u "${RDP_USER}" -p "${RDP_PASS}" -M rdp -o ACTION=enable >/dev/null 2>&1 || true
     netexec smb "${HOSTNAME}" -u "${RDP_USER}" -p "${RDP_PASS}" -M rdp -o ACTION=enable
 
     # Launch RDP client
