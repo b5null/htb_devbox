@@ -26,4 +26,5 @@ Once the VM is created, it automatically:
 git clone https://github.com/b5null/htb_devbox
 cd htb_devbox
 chmod +x gendev.sh
+./gendev.sh
 ```
