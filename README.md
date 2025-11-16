@@ -23,7 +23,7 @@ Once the VM is created, it automatically:
 ## Usage
 
 ```bash
-git clone https://github.com/your/repo.git
+git clone https://github.com/b5null/htb_devbox
 cd htb_devbox
 chmod +x gendev.sh
 ```
