@@ -28,3 +28,16 @@ cd htb_devbox
 chmod +x gendev.sh
 ./gendev.sh
 ```
+
+## Notes
+
+Don't forget to stop the instance once you are done!
+You will need to declare the HTB_API_TOKEN token to perform this
+
+```
+python3 htbcli.py stop --machine puppy
+```
+
+## ToDo
+
+Add the stop interaction once done with using the box.
