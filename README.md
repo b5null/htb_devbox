@@ -15,7 +15,7 @@ Once the VM is created, it automatically:
 ## Requirements
 
 - A Hack The Box subscription that allows generating **retired machines**  
-- A valid `HTB_API_TOKEN` generated at - https://app.hackthebox.com/profile/settings
+- A valid `HTB_API_TOKEN` generated at - https://app.hackthebox.com/account-settings
 - xfreerdp
 
 ---
